@@ -3,7 +3,7 @@
  * @param {Symbol | String} symbolOrKey - Symbol or key in order to get inner event emitter.
  * @return {Object} Mixin.
  */
-export default function ObservableMixin(symbolOrKey) {
+module.exports = function ObservableMixin(symbolOrKey) {
     return {
         subscribe(event, handler, once = false) {
             if (!once) {
@@ -19,4 +19,4 @@ export default function ObservableMixin(symbolOrKey) {
             };
         }
     };
-}
+};
